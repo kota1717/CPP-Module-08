@@ -1,4 +1,4 @@
-TARGET := class_template
+TARGET := span
 
 CXX := c++
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
