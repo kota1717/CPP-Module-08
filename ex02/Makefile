@@ -1,4 +1,4 @@
-TARGET := class_template
+TARGET := stack_iterator
 
 CXX := c++
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
@@ -6,7 +6,7 @@ RMDIR := rm -rf
 
 OBJ_DIR := obj
 
-SRCS := main.cpp \
+SRCS := main.cpp
 
 OBJS := $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
