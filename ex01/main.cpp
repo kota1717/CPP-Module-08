@@ -5,26 +5,51 @@
 
 int main()
 {
-	// Span sp = Span(10000);
-	// sp.addNumber(6);
-	// sp.addNumber(3);
-	// sp.addNumber(17);
-	// sp.addNumber(9);
-	// sp.addNumber(11);
-	// std::cout << sp.shortestSpan() << std::endl;
-	// std::cout << sp.longestSpan() << std::endl;
-	// return 0;
+	Span sp(5);
 
-	Span sp1 = Span(100);
-	std::vector<int> vec(100, 10);
-	vec.push_back(5);
-	std::vector<int>::iterator first = vec.begin();
-	std::vector<int>::iterator end = vec.end();
-	sp1.addNumbers(first, end);
+	// element 0
+	try {
+		std::cout << sp.shortestSpan() << std::endl;
+	} catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	// element 1
+	try {
+		sp.addNumber(1);
+		std::cout << sp.longestSpan() << std::endl;
+	} catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	// max element 1
+	try {
+		Span sp(1);
+		sp.addNumber(42);
+		sp.addNumber(42);
+	} catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	// 42 example
+	Span sp1 = Span(5);
+	sp1.addNumber(6);
+	sp1.addNumber(3);
+	sp1.addNumber(17);
+	sp1.addNumber(9);
+	sp1.addNumber(11);
 	std::cout << sp1.shortestSpan() << std::endl;
 	std::cout << sp1.longestSpan() << std::endl;
 
-	// Span sp1 = Span(1);
-	// std::cout << sp1.shortestSpan() << std::endl;
+	// addNumbers()
+	Span sp2(10000);
+	std::vector<int> vec(9999);
+	vec.push_back(5);
+	std::vector<int>::iterator first = vec.begin();
+	std::vector<int>::iterator end = vec.end();
+	sp2.addNumbers(first, end);
+	std::cout << sp2.shortestSpan() << std::endl;
+	std::cout << sp2.longestSpan() << std::endl;
+
 	return 0;
 }
