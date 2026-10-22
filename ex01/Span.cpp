@@ -59,7 +59,7 @@ int Span::shortestSpan() {
 int Span::longestSpan() {
 	if (nums_.size() < 2)
 		throw std::logic_error("longestSpan() needs at least 2 element.");
-	int most_min_value = getMinValue();
-	int large_value = getMaxValue();
-	return large_value - most_min_value;
+	int min_value = getMinValue();
+	int max_value = getMaxValue();
+	return max_value - min_value;
 }
